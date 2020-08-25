@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, StyleSheet, TouchableOpacity, Text} from 'react-native';
-import Icon from 'react-native-vector-icons/Feather';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const mainScreen = () => {
   const {
@@ -21,7 +21,10 @@ const mainScreen = () => {
         </View>
         <Icon name="menu" size={50} color="green" />
       </TouchableOpacity>
-      <View style={twoButton} />
+      <View style={twoButton}>
+        <Icon name="minus-circle-outline" size={100} color="#db7093" />
+        <Icon name="plus-circle-outline" size={100} color="#2e8b57" />
+      </View>
     </View>
   );
 };
@@ -41,6 +44,9 @@ const styles = StyleSheet.create({
   },
   twoButton: {
     flex: 2,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
   },
   pickerCenterElement: {
     width: '50%',
