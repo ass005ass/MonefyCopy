@@ -1,5 +1,5 @@
 import React from 'react';
-import mainScreen from './scr/mainScreen';
+import MainScreen from './scr/MainScreen';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
@@ -11,7 +11,7 @@ const App = () => {
       <Stack.Navigator>
         <Stack.Screen
           name="Monefy"
-          component={mainScreen}
+          component={MainScreen}
           options={{
             headerStyle: {backgroundColor: '#2e8b57'},
             headerTitleStyle: {
