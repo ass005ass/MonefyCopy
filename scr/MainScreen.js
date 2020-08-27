@@ -2,12 +2,15 @@ import React from 'react';
 import {View, StyleSheet, TouchableOpacity} from 'react-native';
 import PlusMinus from './components/icons/PlusMinus';
 import Picker from './components/Picker';
+import DonutChart from './components/DonutСhart';
 
 const MainScreen = () => {
-  const {container, tape, picker, twoButton} = styles;
+  const {container, donutСhart, picker, twoButton} = styles;
   return (
     <View style={container}>
-      <View style={tape} />
+      <View style={donutСhart}>
+        <DonutChart />
+      </View>
       <TouchableOpacity style={picker}>
         <Picker />
       </TouchableOpacity>
@@ -22,7 +25,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  tape: {
+  donutСhart: {
     flex: 5,
   },
   picker: {
