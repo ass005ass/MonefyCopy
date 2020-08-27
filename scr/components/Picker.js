@@ -9,11 +9,13 @@ const Picker = () => {
   return (
     <View style={container}>
       <Icon name="menu" size={h * 0.06} color="#2e8b57" />
+
       <View style={pickerCenterElement}>
         <Text style={pickerText}>
           Баланс <Rub />
         </Text>
       </View>
+
       <Icon name="menu" size={h * 0.06} color="#2e8b57" />
     </View>
   );

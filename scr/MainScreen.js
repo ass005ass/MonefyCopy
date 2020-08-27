@@ -11,9 +11,11 @@ const MainScreen = () => {
       <View style={donutСhart}>
         <DonutChart />
       </View>
+
       <TouchableOpacity style={picker}>
         <Picker />
       </TouchableOpacity>
+
       <View style={twoButton}>
         <PlusMinus />
       </View>

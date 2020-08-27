@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
+import {View, StyleSheet, Text} from 'react-native';
 import Cocktail from './icons/Cocktail';
 import Gift from './icons/Gift';
 import ShoppingBasket from './icons/ShoppingBasket';
@@ -27,26 +27,33 @@ const DonutChart = () => {
   } = styles;
   return (
     <View style={container}>
-      <View style={header} />
+      <View style={header}>
+        <Text style={{color: '#2e8b57'}}>Август</Text>
+      </View>
+
       <View style={topContainer}>
         <Cocktail />
         <Gift />
         <ShoppingBasket />
         <Cat />
       </View>
+
       <View style={middleContainer}>
         <View style={middleContainerLeft}>
           <Taxi />
           <ToothbrushPaste />
         </View>
+
         <View style={middleContainerCenter}>
           <Diagram />
         </View>
+
         <View style={middleContainerRight}>
           <Train />
           <Thermometer />
         </View>
       </View>
+
       <View style={bottomContainer}>
         <Phone />
         <Car />
@@ -64,6 +71,8 @@ const styles = StyleSheet.create({
   },
   header: {
     flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   topContainer: {
     flex: 3,
