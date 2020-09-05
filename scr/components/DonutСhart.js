@@ -6,7 +6,7 @@ import ShoppingBasket from './icons/ShoppingBasket';
 import Cat from './icons/Cat';
 import Taxi from './icons/Taxi';
 import ToothbrushPaste from './icons/ToothbrushPaste';
-import Diagram from './Diagram';
+import ChartPie from './ChartPie';
 import Train from './icons/Train';
 import Thermometer from './icons/Thermometer';
 import Phone from './icons/Phone';
@@ -20,14 +20,14 @@ const DonutChart = () => {
     topContainer,
     middleContainer,
     bottomContainer,
-    header,
+    headerMonth,
     middleContainerLeft,
     middleContainerCenter,
     middleContainerRight,
   } = styles;
   return (
     <View style={container}>
-      <View style={header}>
+      <View style={headerMonth}>
         <Text style={{color: '#2e8b57'}}>Август</Text>
       </View>
 
@@ -45,7 +45,7 @@ const DonutChart = () => {
         </View>
 
         <View style={middleContainerCenter}>
-          <Diagram />
+          <ChartPie />
         </View>
 
         <View style={middleContainerRight}>
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#f0ffff',
   },
-  header: {
+  headerMonth: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
