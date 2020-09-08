@@ -5,6 +5,7 @@ import {
 } from '@react-navigation/drawer';
 import MainScreen from '../MainScreen';
 import FilterButtonForLeftDrawer from '../components/FilterButtonForLeftDrawer';
+import CalendarButtonForLeftDrawer from '../components/CalendarButtonForLeftDrawer';
 
 const Drawer = createDrawerNavigator();
 
@@ -18,7 +19,7 @@ const CustomDrawerContent = () => {
       <FilterButtonForLeftDrawer name="Год" />
       <FilterButtonForLeftDrawer name="Все" />
       <FilterButtonForLeftDrawer name="Интервал" />
-      <FilterButtonForLeftDrawer name="Выборы даты" />
+      <CalendarButtonForLeftDrawer />
     </DrawerContentScrollView>
   );
 };

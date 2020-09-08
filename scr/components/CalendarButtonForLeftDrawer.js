@@ -1,13 +1,15 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {TouchableOpacity, Text, StyleSheet} from 'react-native';
 import {h, w} from './DimensionWindow';
+import Calendar from './icons/Calendar';
 
-const FilterButtonForLeftDrawer = (props) => {
+const CalendarButtonForLeftDrawer = () => {
   const {container, textContainer} = styles;
   return (
-    <View style={container}>
-      <Text style={textContainer}>{props.name}</Text>
-    </View>
+    <TouchableOpacity style={container}>
+      <Calendar />
+      <Text style={textContainer}>Выбор даты</Text>
+    </TouchableOpacity>
   );
 };
 
@@ -22,10 +24,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginLeft: w * 0.03,
     marginTop: h * 0.015,
+    flexDirection: 'row',
   },
   textContainer: {
     fontSize: h * 0.025,
+    paddingRight: w * 0.07,
   },
 });
 
-export default FilterButtonForLeftDrawer;
+export default CalendarButtonForLeftDrawer;
