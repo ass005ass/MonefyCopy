@@ -1,13 +1,13 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {TouchableOpacity, Text, StyleSheet} from 'react-native';
 import {h, w} from './DimensionWindow';
 
 const FilterButtonForLeftDrawer = (props) => {
   const {container, textContainer} = styles;
   return (
-    <View style={container}>
+    <TouchableOpacity style={container}>
       <Text style={textContainer}>{props.name}</Text>
-    </View>
+    </TouchableOpacity>
   );
 };
 

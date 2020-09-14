@@ -1,7 +1,7 @@
 import React from 'react';
-import LeftDrawerNavigator from './LeftDrawerNavigation';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
+import LeftDrawerNavigator from './LeftDrawerNavigation';
 import Filter from '../components/icons/Filter';
 import HeaderIcons from '../components/HeaderIcons';
 
@@ -14,7 +14,7 @@ const AppNavigation = () => {
         <Stack.Screen
           name="Monefy"
           component={LeftDrawerNavigator}
-          options={{
+          options={({navigation}) => ({
             headerLeft: () => <Filter />,
             headerRight: () => <HeaderIcons />,
             headerStyle: {backgroundColor: '#2e8b57'},
@@ -23,7 +23,7 @@ const AppNavigation = () => {
               fontFamily: 'cursive',
               fontSize: 30,
             },
-          }}
+          })}
         />
       </Stack.Navigator>
     </NavigationContainer>

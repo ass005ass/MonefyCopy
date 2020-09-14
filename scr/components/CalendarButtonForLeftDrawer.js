@@ -1,12 +1,30 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {TouchableOpacity, Text, StyleSheet} from 'react-native';
 import {h, w} from './DimensionWindow';
 import Calendar from './icons/Calendar';
+import RNDateTimePicker from '@react-native-community/datetimepicker';
 
 const CalendarButtonForLeftDrawer = () => {
+  const [toggle, setToggle] = useState(false);
   const {container, textContainer} = styles;
+
+  const DatePicker = () => {
+    if (toggle) {
+      return (
+        <RNDateTimePicker
+          mode="date"
+          value={new Date()}
+          onChange={() => setToggle(false)}
+        />
+      );
+    } else {
+      return null;
+    }
+  };
+
   return (
-    <TouchableOpacity style={container}>
+    <TouchableOpacity style={container} onPress={() => setToggle(true)}>
+      <DatePicker />
       <Calendar />
       <Text style={textContainer}>Выбор даты</Text>
     </TouchableOpacity>

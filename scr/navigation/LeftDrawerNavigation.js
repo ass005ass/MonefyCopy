@@ -4,6 +4,7 @@ import {
   DrawerContentScrollView,
 } from '@react-navigation/drawer';
 import MainScreen from '../MainScreen';
+import PickerInvoiceFilter from '../components/PickerInvoiceFilter';
 import FilterButtonForLeftDrawer from '../components/FilterButtonForLeftDrawer';
 import CalendarButtonForLeftDrawer from '../components/CalendarButtonForLeftDrawer';
 
@@ -12,7 +13,7 @@ const Drawer = createDrawerNavigator();
 const CustomDrawerContent = () => {
   return (
     <DrawerContentScrollView>
-      <FilterButtonForLeftDrawer name="Все счета" />
+      <PickerInvoiceFilter />
       <FilterButtonForLeftDrawer name="День" />
       <FilterButtonForLeftDrawer name="Неделя" />
       <FilterButtonForLeftDrawer name="Месяц" />
@@ -27,7 +28,7 @@ const CustomDrawerContent = () => {
 const LeftDrawerNavigator = () => {
   return (
     <Drawer.Navigator
-      drawerContent={() => <CustomDrawerContent />}
+      drawerContent={(props) => <CustomDrawerContent {...props} />}
       drawerStyle={{width: '60%', backgroundColor: '#f0ffff'}}>
       <Drawer.Screen name="Home" component={MainScreen} />
     </Drawer.Navigator>
